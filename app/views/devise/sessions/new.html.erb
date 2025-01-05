@@ -1,0 +1,20 @@
+<div class="grid place-items-center">
+  <div class="header mb-6 font-large text-large font-extrabold text-rose-600 text-4xl">
+    <h1>Login to ZapChat</h1>
+  </div
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: 'max-w-sm w-full mx-auto') do |f| %>
+    <div class="mb-5">
+      <%= f.label :email, class: "block mb-2 text-lg font-large text-gray-900 dark:text-white" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+    </div>
+
+    <div class="mb-5">
+      <%= f.label :password, class: "block mb-2 text-lg font-large text-gray-900 dark:text-white" %>
+      <%= f.password_field :password, autocomplete: "current-password", class: "bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Log in", class: 'cursor-pointer text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-large rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2' %>
+    </div>
+  <% end %>
+</div>
